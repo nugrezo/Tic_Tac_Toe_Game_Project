@@ -2,29 +2,32 @@
 const api = require('./api')
 const ui = require('./ui')
 
-const onCreateGame = function (event) {
+const onStartGame = function (event) {
   event.preventDefault()
-  api.createGame()
-    .then(ui.createGameSuccess)
-    .catch(ui.createGameFailure)
+  console.log('startGame is', event)
+  api.startGame()
+    .then(ui.startGameSuccess)
+    .catch(ui.startGameFailure)
 }
 
-const onGetGames = function (event) {
+const onGetAllGames = function (event) {
   event.preventDefault()
-  api.getGames()
+  console.log('get all game is', event)
+  api.getAllGames()
     .then(ui.getGameSuccess)
     .catch(ui.getGameFailure)
 }
 
-const onShowAGame = function (event) {
+const onUpdateGame = function (event) {
   event.preventDefault()
-  api.showAGame()
-    .then(ui.showGameSuccess)
-    .catch(ui.showGameFailure)
+  console.log('update game is', event)
+  api.updateGame()
+    .then(ui.updateGameSuccess)
+    .catch(ui.updateGameFailure)
 }
 
 module.exports = {
-  onCreateGame: onCreateGame,
-  onGetGames: onGetGames,
-  onShowAGame: onShowAGame
+  onStartGame: onStartGame,
+  onGetAllGames: onGetAllGames,
+  onUpdateGame: onUpdateGame
 }

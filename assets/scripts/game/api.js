@@ -2,7 +2,7 @@
 const config = require('../config')
 const store = require('../store')
 
-const createGame = function (data) {
+const startGame = function (data) {
   return $.ajax({
     url: config.apiUrl + '/games',
     method: 'POST',
@@ -13,7 +13,7 @@ const createGame = function (data) {
   })
 }
 
-const getGames = function (data) {
+const getAllGames = function (data) {
   return $.ajax({
     url: config.apiUrl + '/games',
     method: 'GET',
@@ -21,16 +21,6 @@ const getGames = function (data) {
       Authorization: 'Bearer ' + store.user.token
     },
     data: data
-  })
-}
-
-const showAGame = function (id) {
-  return $.ajax({
-    url: config.apiUrl + '/games' + id,
-    method: 'GET',
-    headers: {
-      Authorization: 'Bearer ' + store.user.token
-    }
   })
 }
 
@@ -46,8 +36,7 @@ const updateGame = function (data) {
 }
 
 module.exports = {
-  createGame: createGame,
-  getGames: getGames,
-  showAGame: showAGame,
+  startGame: startGame,
+  getAllGames: getAllGames,
   updateGame: updateGame
 }

@@ -1,40 +1,39 @@
 
 const store = require('../store.js')
 
-const createGameSuccess = function (response) {
-  store.game = response.game
+const startGameSuccess = function (res) {
+  store.game = res.game
   $('#message').text('Start Playing')
-  $('#gameID').text('Game ID:' + response.game.id)
-  $('game-board').show()
   console.log('game start')
 }
 
-const createGameFailure = function () {
-  ('#message').text('Create Game Failed')
+const startGameFailure = function () {
+  ('#message').text('Create A New Game Failed')
 }
 
-const getGameSuccess = function (response) {
-  store.game = response.game
+const getAllGameSuccess = function (res) {
+  store.game = res.game
   $('#message').text('Get Game Successful')
 }
 
-const getGameFailure = function () {
+const getAllGameFailure = function () {
   $('#message').text('Get Game Failed')
 }
 
-const showGameSuccess = function (reponse) {
-  $('#message').text('Show Game Successful')
+const updateGameSuccess = function (res) {
+  store.game = res.game
+  $('#message').text('Update Game Successful')
 }
 
-const showGameFailure = function () {
-  $('#message').text('Show Game Failed')
+const updateGameFailure = function () {
+  $('#message').text('Update Game Failed')
 }
 
 module.exports = {
-  createGameSuccess,
-  createGameFailure,
-  getGameSuccess,
-  getGameFailure,
-  showGameSuccess,
-  showGameFailure
+  startGameSuccess,
+  startGameFailure,
+  getAllGameSuccess,
+  getAllGameFailure,
+  updateGameSuccess,
+  updateGameFailure
 }

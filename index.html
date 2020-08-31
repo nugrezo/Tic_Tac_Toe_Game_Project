@@ -60,16 +60,26 @@
 <br>
 
  <section>
-   <form id="create-game">
+   <form id="start-game">
      <h3>Start Playing</h3>
-     <button class="button" type="button">Start a New Game</button>
+     <input type="button" value="Start a New Game">
    </form>
 </section>
 
 <section>
+  <form id="get-all-games">
+    <input type="button" value="Get All Games">
+  </form>
+</section>
+
+<section>
+  <form id="update-game">
+    <input type="button" value="Update Game">
+  </form>
+</section>
+
+<section>
   <div id="game-board">
-    <p id="game-ID">Game ID:</p>
-    <p id="game-turn">Player X' turn</p>
   </div>
   <div class="flex-grid">
     <div class="col" id="1"></div>
@@ -82,59 +92,6 @@
     <div class="col" id="8"></div>
     <div class="col" id="9"></div>
   </div>
-</section>
-
-<section>
-  <nav>
-    <form id="get-games">
-      <button class="button" type="button">Get All Games</button>
-    </form>
-    <form id="close-get-game">
-      <button class="button" type="button">Close</button>
-    </form>
-
-    <br>
-
-  <form id="show-a-game">
-    <input id="show-game-id" type="text" name="game[id]" placeholder="Game ID">
-    <button id="show-game" type="button" class="button">Show a Game</button>
-  </form>
-  <div class="show-this-game">
-    <table id="this-game-table">
-      <tr>
-        <td id="cell1" class="this-game-cells"></td>
-        <td id="cell2" class="this-game-cells"></td>
-        <td id="cell3" class="this-game-cells"></td>
-        <td id="cell4" class="this-game-cells"></td>
-        <td id="cell5" class="this-game-cells"></td>
-        <td id="cell6" class="this-game-cells"></td>
-        <td id="cell7" class="this-game-cells"></td>
-        <td id="cell8" class="this-game-cells"></td>
-        <td id="cell9" class="this-game-cells"></td>
-        </tr>
-      </table>
-
-<div id="close-this-game">
-    <form id="close-show-this-game">
-        <button class="button" type="button">Close</button>
-    </form>
-</div>
-</div>
-</nav>
-
-  <div id="games-id-display">
-    <p id="all-games-ID"></p>
-  </div>
-</section>
-
-<section>
-  <div class="winTie">
-    <h2 id="winOrTie"></h2>
-  </div>
-  <div class="closeWinTie">
-    <button class="button" type="button">Close</button>
-  </div>
-
 </section>
 
     </body>
