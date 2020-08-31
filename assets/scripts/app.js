@@ -7,15 +7,11 @@
 // require('./example')
 
 const authEvents = require('./auth/events')
-const gameEvents = require('./game/events')
 
 $(() => {
-  $('#sign-in').hide()
-  $('#change-password').hide()
-  $('#sign-up').on('submit', authEvents.onSignUp)
-  $('#sign-in').on('submit', authEvents.onSignIn)
-  $('#change-password').on('submit', authEvents.onChangePassword)
-  $('#sign-out').on('submit', authEvents.onSignOut)
-
-  $('#create-game').on('click', gameEvents.onCreateGame)
+  $('#change-password-form').hide()
+  $('#sign-up-form').on('submit', authEvents.onSignUpForm)
+  $('#sign-in-form').on('submit', authEvents.onSignInForm)
+  $('#change-password-form').on('submit', authEvents.onChangePasswordForm)
+  $('#sign-out-form').on('submit', authEvents.onSignOut)
 })

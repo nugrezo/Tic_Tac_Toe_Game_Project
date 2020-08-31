@@ -1,52 +1,54 @@
 
-const store = require('../store.js')
+const store = require('./../store')
 
-const onSignUpSuccess = function (response) {
-  $('#sign-up').trigger('reset')
-  $('#message').text('Thanks for signing up' + response.user.email)
-  $('sign-up').trigger('reset')
-  $('#sign-up').hide()
-  $('#sign-in').show()
+const signUpSuccess = function (res) {
+  $('#message').text('Thanks for Siging up ' + res.user.email)
+  $('#sign-up-form').trigger('reset')
 }
 
-const onSignUpFailure = function () {
-  $('#message').text('Sign up failed. Try again')
+const signUpFailure = function () {
+  $('#message').text('Try again.')
+  $('#sign-up-form').trigger('reset')
 }
 
-const onSignInSuccess = function (response) {
-  store.user = response.user
-  $('#message').text('Thanks for signing in' + response.user.email)
-  $('#sign-in').trigger('reset')
-  $('#change-password').show()
-  $('#sign-in').hide()
-}
-const onSignInFailure = function () {
-  $('#message').text('Sign in failed try again')
-}
-const onChangePasswordSuccess = function () {
-  $('#message').text('Changed password successfully')
-  $('#change-password').hide()
+const signInSuccess = function (res) {
+  store.user = res.user
+  $('#message').text('Thanks for Signing in ' + res.user.email)
+  $('#change-password-form').show()
+  $('#sign-in-form').hide()
+  $('#sign-up-form').hide()
 }
 
-const onChangePasswordFailure = function () {
-  $('#message').text('Error on change password')
+const signInFailure = function () {
+  $('#message').text('Try again.')
+  $('#sign-in-form').trigger('reset')
 }
 
-const onSignOutSuccess = function (response) {
-  $('#sign-out').text('Signed out. Thanks for playing')
+const changePasswordSuccess = function (res) {
+  $('#message').text('Password changed!')
+  $('#change-password-form').trigger('reset')
 }
 
-const onSignOutFailure = function () {
-  $('#message').text('Sign out failed')
+const changePasswordFailure = function (res) {
+  $('#message').text('Try again.')
+  $('#change-password-form').trigger('reset')
+}
+const signOutSuccess = function (res) {
+  $('#message').text('Sign out success')
+  $('#sign-out-form').trigger('reset')
 }
 
+const signOutFailure = function (res) {
+  $('#message').text('Try again.')
+  $('#sign-out-form').trigger('reset')
+}
 module.exports = {
-  onSignUpSuccess,
-  onSignUpFailure,
-  onSignInSuccess,
-  onSignInFailure,
-  onChangePasswordSuccess,
-  onChangePasswordFailure,
-  onSignOutSuccess,
-  onSignOutFailure
+  signUpSuccess: signUpSuccess,
+  signUpFailure: signUpFailure,
+  signInSuccess: signInSuccess,
+  signInFailure: signInFailure,
+  changePasswordSuccess: changePasswordSuccess,
+  changePasswordFailure: changePasswordFailure,
+  signOutSuccess: signOutSuccess,
+  signOutFailure: signOutFailure
 }

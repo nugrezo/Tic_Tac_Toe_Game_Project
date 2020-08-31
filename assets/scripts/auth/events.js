@@ -1,46 +1,49 @@
+
 const getFormFields = require('./../../../lib/get-form-fields')
 const api = require('./api')
 const ui = require('./ui')
 
-const onSignUp = function (event) {
+const onSignUpForm = function (event) {
   event.preventDefault()
+  console.log('event is', event)
   const form = event.target
   const data = getFormFields(form)
   api.signUp(data)
-    .then(ui.onSignUpSuccess)
-    .catch(ui.onSignInFailure)
+    .then(ui.signUpSuccess)
+    .catch(ui.signUpFailure)
 }
 
-const onSignIn = function (event) {
+const onSignInForm = function (event) {
   event.preventDefault()
+  console.log('event is:', event)
   const form = event.target
   const data = getFormFields(form)
   api.signIn(data)
-    .then(ui.onSignInSuccess)
-    .catch(ui.onSignInFailure)
+    .then(ui.signInSuccess)
+    .catch(ui.signInFailure)
 }
 
-const onChangePassword = function (event) {
+const onChangePasswordForm = function (event) {
   event.preventDefault()
+  console.log('event is:', event)
   const form = event.target
   const data = getFormFields(form)
   api.changePassword(data)
-    .then(ui.onChangePasswordSuccess)
-    .catch(ui.onChangePasswordFailure)
+    .then(ui.changePasswordSuccess)
+    .catch(ui.changePasswordFailure)
 }
 
 const onSignOut = function (event) {
   event.preventDefault()
-  const form = event.target
-  const data = getFormFields(form)
-  api.signOut(data)
-    .then(ui.onSignOutSuccess)
-    .catch(ui.onSignOutFailure)
+  console.log('event is:', event)
+  api.signOut()
+    .then(ui.signOutSuccess)
+    .catch(ui.signOutFailure)
 }
 
 module.exports = {
-  onSignUp: onSignUp,
-  onSignIn: onSignIn,
-  onChangePassword: onChangePassword,
+  onSignUpForm: onSignUpForm,
+  onSignInForm: onSignInForm,
+  onChangePasswordForm: onChangePasswordForm,
   onSignOut: onSignOut
 }

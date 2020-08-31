@@ -15,50 +15,127 @@
       <h1> PLAY TIC TAC TOE</h1>
       <p id="message"></p>
 <section>
-  <form id="sign-up" class="border">
-
+  <form id="sign-up-form" class="forms">
+    <fieldset>
        <legend>Sign up!</legend>
        <input type="text" name="credentials[email]" placeholder="Email">
        <input type="password" name="credentials[password]" placeholder="Password">
        <input type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
        <input type="submit" value="Sign up!">
-
+    </fieldset>
    </form>
+</section>
 
-   <form id="sign-in" class="border">
-
+<section>
+   <form id="sign-in-form" class="forms">
+     <fieldset>
        <legend>Sign in!</legend>
        <input type="text" name="credentials[email]" placeholder="Email">
        <input type="password" name="credentials[password]" placeholder="Password">
        <input type="submit" value="Sign in!">
-
+     </fieldset>
    </form>
+ </section>
 
-   <form id="change-password" class="border">
-
+ <section>
+  <form id="change-password-form" class="forms">
+   <fieldset>
        <legend>Change Password!</legend>
        <input type="password" name="passwords[old]" placeholder="Old Password">
        <input type="password" name="passwords[new]" placeholder="New Password">
        <input type="submit" value="Change Password!">
+   </fieldset>
+ </form>
+ </section>
+<br>
+
+ <section>
+  <form id="sign-out-form" class="forms">
+   <fieldset>
+      <input type="submit" value="Sign Out!">
+   </fieldset>
+ </form>
+ </section>
+
+<br>
+
+ <section>
+   <form id="create-game">
+     <h3>Start Playing</h3>
+     <button class="button" type="button">Start a New Game</button>
    </form>
-<br>
-<br>
-
-    <form id="sign-out">
-       <input type="submit" value="Sign out!">
-    </form>
-
 </section>
 
 <section>
-    <form id="create-game">
-      <input type="button" value="Start A New Game!">
-    </form>
-
-
+  <div id="game-board">
+    <p id="game-ID">Game ID:</p>
+    <p id="game-turn">Player X' turn</p>
+  </div>
+  <div class="flex-grid">
+    <div class="col" id="1"></div>
+    <div class="col" id="2"></div>
+    <div class="col" id="3"></div>
+    <div class="col" id="4"></div>
+    <div class="col" id="5"></div>
+    <div class="col" id="6"></div>
+    <div class="col" id="7"></div>
+    <div class="col" id="8"></div>
+    <div class="col" id="9"></div>
+  </div>
 </section>
 
+<section>
+  <nav>
+    <form id="get-games">
+      <button class="button" type="button">Get All Games</button>
+    </form>
+    <form id="close-get-game">
+      <button class="button" type="button">Close</button>
+    </form>
 
+    <br>
+
+  <form id="show-a-game">
+    <input id="show-game-id" type="text" name="game[id]" placeholder="Game ID">
+    <button id="show-game" type="button" class="button">Show a Game</button>
+  </form>
+  <div class="show-this-game">
+    <table id="this-game-table">
+      <tr>
+        <td id="cell1" class="this-game-cells"></td>
+        <td id="cell2" class="this-game-cells"></td>
+        <td id="cell3" class="this-game-cells"></td>
+        <td id="cell4" class="this-game-cells"></td>
+        <td id="cell5" class="this-game-cells"></td>
+        <td id="cell6" class="this-game-cells"></td>
+        <td id="cell7" class="this-game-cells"></td>
+        <td id="cell8" class="this-game-cells"></td>
+        <td id="cell9" class="this-game-cells"></td>
+        </tr>
+      </table>
+
+<div id="close-this-game">
+    <form id="close-show-this-game">
+        <button class="button" type="button">Close</button>
+    </form>
+</div>
+</div>
+</nav>
+
+  <div id="games-id-display">
+    <p id="all-games-ID"></p>
+  </div>
+</section>
+
+<section>
+  <div class="winTie">
+    <h2 id="winOrTie"></h2>
+  </div>
+  <div class="closeWinTie">
+    <button class="button" type="button">Close</button>
+  </div>
+
+</section>
 
     </body>
 </html>

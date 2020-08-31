@@ -1,5 +1,4 @@
-'use strict'
-const config = require('./../config')
+const config = require('../config')
 const store = require('../store')
 
 const signUp = function (data) {
@@ -9,6 +8,7 @@ const signUp = function (data) {
     data: data
   })
 }
+
 const signIn = function (data) {
   return $.ajax({
     url: config.apiUrl + '/sign-in',
@@ -16,6 +16,7 @@ const signIn = function (data) {
     data: data
   })
 }
+
 const changePassword = function (data) {
   return $.ajax({
     url: config.apiUrl + '/change-password',
@@ -27,7 +28,7 @@ const changePassword = function (data) {
   })
 }
 
-const signOut = function (data) {
+const signOut = function () {
   return $.ajax({
     url: config.apiUrl + '/sign-out',
     method: 'DELETE',
@@ -36,6 +37,7 @@ const signOut = function (data) {
     }
   })
 }
+
 module.exports = {
   signUp: signUp,
   signIn: signIn,
