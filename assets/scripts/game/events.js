@@ -2,6 +2,15 @@
 const api = require('./api')
 const ui = require('./ui')
 
+let currentPlayer = 'X'
+
+const onBoxClick = function (event) {
+  const box = $(event.target)
+  box.text(currentPlayer)
+  currentPlayer = currentPlayer === 'O' ? 'X' : 'O'
+  console.log('onBoxClick ran')
+  console.log('box')
+}
 const onStartGame = function (event) {
   event.preventDefault()
   console.log('startGame is', event)
@@ -12,10 +21,10 @@ const onStartGame = function (event) {
 
 const onGetAllGames = function (event) {
   event.preventDefault()
-  console.log('get all game is', event)
+  console.log('event is', event)
   api.getAllGames()
-    .then(ui.getGameSuccess)
-    .catch(ui.getGameFailure)
+    .then(ui.getAllGamesSuccess)
+    .catch(ui.getAllGamesFailure)
 }
 
 const onUpdateGame = function (event) {
@@ -29,5 +38,6 @@ const onUpdateGame = function (event) {
 module.exports = {
   onStartGame: onStartGame,
   onGetAllGames: onGetAllGames,
-  onUpdateGame: onUpdateGame
+  onUpdateGame: onUpdateGame,
+  onBoxClick: onBoxClick
 }

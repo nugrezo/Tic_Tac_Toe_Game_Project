@@ -3,21 +3,19 @@ const store = require('../store.js')
 
 const startGameSuccess = function (res) {
   store.game = res.game
-  $('#message').text('Start Playing')
-  console.log('game start')
 }
 
 const startGameFailure = function () {
   ('#message').text('Create A New Game Failed')
 }
 
-const getAllGameSuccess = function (res) {
+const getAllGamesSuccess = function (res) {
   store.game = res.game
-  $('#message').text('Get Game Successful')
+  $('#message1').text(`You Played ${res.games.length} games`)
 }
 
-const getAllGameFailure = function () {
-  $('#message').text('Get Game Failed')
+const getAllGamesFailure = function () {
+  $('#message1').text('Get Game Failed')
 }
 
 const updateGameSuccess = function (res) {
@@ -30,10 +28,11 @@ const updateGameFailure = function () {
 }
 
 module.exports = {
-  startGameSuccess,
-  startGameFailure,
-  getAllGameSuccess,
-  getAllGameFailure,
-  updateGameSuccess,
-  updateGameFailure
+  startGameSuccess: startGameSuccess,
+  startGameFailure: startGameFailure,
+  getAllGamesSuccess: getAllGamesSuccess,
+  getAllGamesFailure: getAllGamesFailure,
+  updateGameSuccess: updateGameSuccess,
+  updateGameFailure: updateGameFailure
+
 }

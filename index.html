@@ -14,10 +14,17 @@
     <body>
       <h1> PLAY TIC TAC TOE</h1>
       <p id="message"></p>
+      <section>
+        <form id="start-game">
+          <h3>Start Playing</h3>
+          <input type="button" value="Start a New Game">
+        </form>
+     </section>
+
 <section>
   <form id="sign-up-form" class="forms">
     <fieldset>
-       <legend>Sign up!</legend>
+       <legend>Sign up Form</legend>
        <input type="text" name="credentials[email]" placeholder="Email">
        <input type="password" name="credentials[password]" placeholder="Password">
        <input type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
@@ -25,18 +32,18 @@
     </fieldset>
    </form>
 </section>
-
+<br>
 <section>
    <form id="sign-in-form" class="forms">
      <fieldset>
-       <legend>Sign in!</legend>
+       <legend>Sign in Form</legend>
        <input type="text" name="credentials[email]" placeholder="Email">
        <input type="password" name="credentials[password]" placeholder="Password">
        <input type="submit" value="Sign in!">
      </fieldset>
    </form>
  </section>
-
+<br>
  <section>
   <form id="change-password-form" class="forms">
    <fieldset>
@@ -48,27 +55,12 @@
  </form>
  </section>
 <br>
-
- <section>
-  <form id="sign-out-form" class="forms">
-   <fieldset>
-      <input type="submit" value="Sign Out!">
-   </fieldset>
- </form>
- </section>
-
 <br>
-
- <section>
-   <form id="start-game">
-     <h3>Start Playing</h3>
-     <input type="button" value="Start a New Game">
-   </form>
-</section>
 
 <section>
   <form id="get-all-games">
     <input type="button" value="Get All Games">
+    <p id="message1"></p>
   </form>
 </section>
 
@@ -79,19 +71,33 @@
 </section>
 
 <section>
-  <div id="game-board">
+  <div>
+    <h4 id="whoseTurn">Now Player X is playing</h4>
   </div>
-  <div class="flex-grid">
-    <div class="col" id="1"></div>
-    <div class="col" id="2"></div>
-    <div class="col" id="3"></div>
-    <div class="col" id="4"></div>
-    <div class="col" id="5"></div>
-    <div class="col" id="6"></div>
-    <div class="col" id="7"></div>
-    <div class="col" id="8"></div>
-    <div class="col" id="9"></div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="row board h-100">
+      <div data-cell-index="0" class="col-4 box"></div>
+      <div data-cell-index="1" class="col-4 box"></div>
+      <div data-cell-index="2" class="col-4 box"></div>
+      <div data-cell-index="3" class="col-4 box"></div>
+      <div data-cell-index="4" class="col-4 box"></div>
+      <div data-cell-index="5" class="col-4 box"></div>
+      <div data-cell-index="6" class="col-4 box"></div>
+      <div data-cell-index="7" class="col-4 box"></div>
+      <div data-cell-index="8" class="col-4 box"></div>
+    </div>
   </div>
+</section>
+
+<section>
+ <form id="sign-out-form" class="forms">
+  <fieldset>
+     <input type="submit" value="Sign Out!">
+  </fieldset>
+</form>
 </section>
 
     </body>

@@ -24,14 +24,23 @@ const getAllGames = function (data) {
   })
 }
 
-const updateGame = function (data) {
+const updateGame = function () {
+  console.log('boxClick ran')
   return $.ajax({
     url: config.apiUrl + '/games/' + store.game,
     method: 'PATCH',
     headers: {
       Authorization: 'Bearer ' + store.user.token
     },
-    data: data
+    data: {
+      game: {
+        cell: {
+          index: '',
+          value: ''
+        },
+        over: false
+      }
+    }
   })
 }
 
@@ -39,4 +48,5 @@ module.exports = {
   startGame: startGame,
   getAllGames: getAllGames,
   updateGame: updateGame
+
 }
