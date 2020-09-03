@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>Example</title>
+      <title>Tic Tac Toe Game</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
       <!-- Do not add `link` tags-->
@@ -12,50 +12,46 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <h1> PLAY TIC TAC TOE</h1>
-      <p id="message"></p>
-      <section>
-        <form id="start-game">
-          <h3>Start Playing</h3>
-          <input type="button" value="Start a New Game">
-        </form>
-     </section>
+      <h1> PLAY <strong>TIC TAC TOE</strong> GAME</h1>
 
+  <!--AUTH PART HTML-->
 <section>
-  <form id="sign-up-form" class="forms">
-    <fieldset>
-       <legend>Sign up Form</legend>
-       <input type="text" name="credentials[email]" placeholder="Email">
-       <input type="password" name="credentials[password]" placeholder="Password">
-       <input type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
-       <input type="submit" value="Sign up!">
-    </fieldset>
-   </form>
-</section>
-<br>
-<section>
-   <form id="sign-in-form" class="forms">
-     <fieldset>
-       <legend>Sign in Form</legend>
-       <input type="text" name="credentials[email]" placeholder="Email">
-       <input type="password" name="credentials[password]" placeholder="Password">
-       <input type="submit" value="Sign in!">
-     </fieldset>
-   </form>
- </section>
-<br>
- <section>
+<div class="auth-form-container">
+    <div class="form1">
+      <form id="sign-up-form" class="forms">
+        <input type="text" name="credentials[email]" placeholder="Email">
+        <input type="password" name="credentials[password]" placeholder="Password">
+        <input type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
+        <input type="submit" class="form-button" value="Sign up!">
+        <p id="auth-message-sign-up"></p>
+      </form>
+    </div>
+
+    <div class="form2">
+      <form id="sign-in-form" class="forms">
+        <input type="text" name="credentials[email]" placeholder="Email">
+        <input type="password" name="credentials[password]" placeholder="Password">
+        <input type="submit" class="form-button" value="Sign in!">
+        <p id="auth-message-sign-in"></p>
+      </form>
+    </div>
+
+<div class="form3">
   <form id="change-password-form" class="forms">
-   <fieldset>
-       <legend>Change Password!</legend>
        <input type="password" name="passwords[old]" placeholder="Old Password">
        <input type="password" name="passwords[new]" placeholder="New Password">
-       <input type="submit" value="Change Password!">
-   </fieldset>
+       <input type="submit" class="form-button" value="Change Password!">
+       <p id="auth-message-password-change"></p>
  </form>
- </section>
-<br>
-<br>
+</div>
+</div>
+</section>
+
+  <form id="start-game">
+    <h3>Start Playing</h3>
+    <input type="button" value="Start a New Game">
+  </form>
+
 
 <section>
   <form id="get-all-games">
@@ -64,17 +60,20 @@
   </form>
 </section>
 
-<section>
-  <form id="update-game">
-    <input type="button" value="Update Game">
-  </form>
-</section>
 
-<section>
-  <div>
-    <h4 id="whoseTurn">Now Player X is playing</h4>
-  </div>
-</section>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
 <section>
   <div class="container">
@@ -94,9 +93,8 @@
 
 <section>
  <form id="sign-out-form" class="forms">
-  <fieldset>
      <input type="submit" value="Sign Out!">
-  </fieldset>
+        <p id="auth-message-sign-out"></p>
 </form>
 </section>
 

@@ -1,5 +1,64 @@
 @import '~bootstrap/scss/bootstrap';
 
+h1 {
+  position: relative;
+  text-align: center;
+  font-style: normal;
+  font-size: 40px;
+  padding: 40px;
+}
+
+
+.form1 {
+  width: 300px;
+  position: absolute;
+  left: 250px;
+  top: 150px;
+  padding: 16px;
+  box-shadow: 0 0 10px gray;
+  border-style: groove;
+}
+
+.form2 {
+  position: absolute;
+  left: 800px;
+  top: 150px;
+  width: 300px;
+  padding: 16px;
+  box-shadow: 0 0 10px gray;
+  border-style: groove;
+}
+
+.form3 {
+  width: 300px;
+  padding: 16px;
+  position: absolute;
+  top: 150px;
+  left: 930px;
+  box-shadow: 0 0 10px gray;
+  border-style: groove;
+}
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 5px;
+  margin: 5px 0 22px 0;
+  border: 0px;
+  background: #f1f1f1;
+}
+
+.form-button {
+ background-color: #4CAF50;
+ color: white;
+ padding: 5px 10px;
+ margin: 8px 0;
+ border: none;
+ cursor: pointer;
+ width: 100%;
+ opacity: 0.9;
+ font-size: 20px;
+}
+
 .container {
   height: 100vh;
 }

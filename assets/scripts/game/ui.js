@@ -3,6 +3,10 @@ const store = require('../store.js')
 
 const startGameSuccess = function (res) {
   store.game = res.game
+  $('.form3').show()
+  $('.form1').hide()
+  $('.form2').hide()
+  $('#sign-out-form').show()
 }
 
 const startGameFailure = function () {
