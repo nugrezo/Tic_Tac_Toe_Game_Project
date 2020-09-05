@@ -44,7 +44,7 @@ const drawGame = function () {
     over = true
   }
 }
-// upating the api when box is clicked with the current palyer
+// updating the api when box is clicked with the current player
 // and executing winGame and draw game function when box is clicked.
 
 const onBoxClick = function (event) {
