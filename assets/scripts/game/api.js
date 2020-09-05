@@ -2,10 +2,21 @@
 const config = require('../config')
 const store = require('../store')
 
-const startGame = function (data) {
+const startGame = function () {
   return $.ajax({
     url: config.apiUrl + '/games',
     method: 'POST',
+    headers: {
+      Authorization: 'Bearer ' + store.user.token
+    },
+    data: {}
+  })
+}
+
+const updateGame = function (data) {
+  return $.ajax({
+    url: config.apiUrl + '/games/' + store.game._id,
+    method: 'PATCH',
     headers: {
       Authorization: 'Bearer ' + store.user.token
     },
@@ -13,29 +24,10 @@ const startGame = function (data) {
   })
 }
 
-const getAllGames = function (boxNum, CurrentPlayer) {
+const getAllGames = function (data) {
   return $.ajax({
     url: config.apiUrl + '/games',
     method: 'GET',
-    headers: {
-      Authorization: 'Bearer ' + store.user.token
-    },
-    data: {
-      game: {
-        cell: {
-          index: 'BoxNum',
-          value: 'currentPlayer'
-        },
-        over: false
-      }
-    }
-  })
-}
-
-const updateGame = function (data) {
-  return $.ajax({
-    url: config.apiUrl + '/games' + store.game._id,
-    method: 'PATCH',
     headers: {
       Authorization: 'Bearer ' + store.user.token
     },

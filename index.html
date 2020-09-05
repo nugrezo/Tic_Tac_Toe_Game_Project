@@ -16,8 +16,6 @@
 
   <!--AUTH PART HTML-->
 <section>
-<div class="auth-form-container">
-    <div class="form1">
       <form id="sign-up-form" class="forms">
         <input type="text" name="credentials[email]" placeholder="Email">
         <input type="password" name="credentials[password]" placeholder="Password">
@@ -25,55 +23,42 @@
         <input type="submit" class="form-button" value="Sign up!">
         <p id="auth-message-sign-up"></p>
       </form>
-    </div>
 
-    <div class="form2">
       <form id="sign-in-form" class="forms">
         <input type="text" name="credentials[email]" placeholder="Email">
         <input type="password" name="credentials[password]" placeholder="Password">
         <input type="submit" class="form-button" value="Sign in!">
         <p id="auth-message-sign-in"></p>
       </form>
-    </div>
 
-<div class="form3">
   <form id="change-password-form" class="forms">
        <input type="password" name="passwords[old]" placeholder="Old Password">
        <input type="password" name="passwords[new]" placeholder="New Password">
        <input type="submit" class="form-button" value="Change Password!">
        <p id="auth-message-password-change"></p>
  </form>
-</div>
-</div>
+
 </section>
 
   <form id="start-game">
-    <h3>Start Playing</h3>
     <input type="button" value="Start a New Game">
   </form>
-
 
 <section>
   <form id="get-all-games">
     <input type="button" value="Get All Games">
-    <p id="message1"></p>
   </form>
 </section>
+<p id=game-message-get-all-games></p>
 
+<p id='game-message-status-game'></p>
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+<section>
+ <form id="sign-out-form" class="forms">
+     <input type="submit" value="Sign Out!">
+</form>
+  <p id="auth-message-sign-out"></p>
+</section>
 
 <section>
   <div class="container">
@@ -90,13 +75,5 @@
     </div>
   </div>
 </section>
-
-<section>
- <form id="sign-out-form" class="forms">
-     <input type="submit" value="Sign Out!">
-        <p id="auth-message-sign-out"></p>
-</form>
-</section>
-
     </body>
 </html>

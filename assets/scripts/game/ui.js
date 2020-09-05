@@ -3,10 +3,17 @@ const store = require('../store.js')
 
 const startGameSuccess = function (res) {
   store.game = res.game
-  $('.form3').show()
-  $('.form1').hide()
-  $('.form2').hide()
+  $('.box').text('')
+  $('#auth-message-sign-up').hide()
+  $('#sign-up-form').hide()
+  $('#auth-message-sign-in').hide()
+  $('#sign-in-form').hide()
+  $('#change-password-form').show()
+  $('#auth-message-password-change').show()
+  $('.container').show()
+  $('#get-all-games').show()
   $('#sign-out-form').show()
+  $('#auth-message-sign-out').show()
 }
 
 const startGameFailure = function () {
@@ -15,19 +22,19 @@ const startGameFailure = function () {
 
 const getAllGamesSuccess = function (res) {
   store.game = res.game
-  $('#message1').text(`You Played ${res.games.length} games`)
+  $('#game-message-get-all-games').text(`The number of the game played: ${res.games.length}`)
 }
 
 const getAllGamesFailure = function () {
-  $('#message1').text('Get Game Failed')
+  $('#game-message-get-all-games').text('Get Game Failed')
 }
 
-const updateGameSuccess = function (res) {
+const onBoxClickSuccess = function (res) {
   store.game = res.game
   $('#message').text('Update Game Successful')
 }
 
-const updateGameFailure = function () {
+const onBoxClickFailure = function () {
   $('#message').text('Update Game Failed')
 }
 
@@ -36,7 +43,7 @@ module.exports = {
   startGameFailure: startGameFailure,
   getAllGamesSuccess: getAllGamesSuccess,
   getAllGamesFailure: getAllGamesFailure,
-  updateGameSuccess: updateGameSuccess,
-  updateGameFailure: updateGameFailure
+  onBoxClickSuccess: onBoxClickSuccess,
+  onBoxClickFailure: onBoxClickFailure
 
 }
