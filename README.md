@@ -1,37 +1,36 @@
-**bold**Introduction**bold**
-
--This is the first project asigned by General Assebmly. This is a game prorject name is Tic Tac Toe.
--The project is assigned after the third week of class completion and required to be complated in one week.
--This is a front-end development project.
--The game will be played agaist user and user. The game will not be played against user and computer.
-
-**bold**The History and Story of the Game**bold**
-
--The game is being played three-in-a-row boards with nine squares.
--The early variation of the game was played in the Roman Empire with the different names. Since 1884 the name of the game has started to be called Tic-Tac-Toe
-
-**bold**Game Strategy**bold**
-
+**bold**Game Application: Tic-Tac-Toe**bold**
+-The application allows user to play tic tac toe game.The game is being played three-in-a-row boards with nine squares.
 -The first player is designated "X" has nine possible positions corresponding to the nine squares in the grid
 -The second player is designated "O" has must respond "X"`s opening mark.
 -Win strategy: If the player has two in a row, they can place a third to get three in a row.
 -Bloc strategy: If the player has two in a row, the player must play the third themselves to block the other player
 -Draw strategy: This is the case none of the player is able to make three in a row.
 
-**bold**Planning and Development of the Tic Tac Toe Game Project**bold**
+-This is the first project asigned by General Assebmly.
+-The project is assigned after the third week of class completion and required to be complated in one week.
+-This is a front-end development project.
+-The game will be played agaist user and user. The game will not be played against user and computer.
 
-In this project user experince is called auth part.And user must be able to make below actions.
+**bold**Important Links**bold**
+-Deployed Repo: https://github.com/nugrezo/Tic_Tac_Toe_Game_Project
+-Deployed Client : https://nugrezo.github.io/Tic_Tac_Toe_Game_Project/
 
--The user must be able to sign-in/sign-up and change-password.
--The user must be able to sign out.
--The user must be able to see number of the games played
+**bold**Planning Story**bold**
 
-in this project board actions called game actions. Game actions steps are below.
+Firt wire frame of the game was planned.
+The coding approach of the game was conducted with an extensive research
+Inputs and outpusts of the game were defined end expored on many front-end game applications.
+in the end Git hub is used for deployment and commit of the project.
 
--The user must be able to click on board.
--The user must be able to make valid moves.
--The user must be able to see the status of the game. Won or draw cases.
--The user must be able to start a new game. Cliking on the start game button will start the game
+**bold**User Stories**bold**
+
+As a user i would like to be able to sign-in/sign-up and change-password.
+As a user i would like to be able to start and play tic-tac-toe game.
+As a user i would like to be able to only make valid moves.
+As a user i would like a message to be displayed when someone won the game
+As a user i would like to see the number of games played
+As a user i would like to be able to restart new game when the game is over
+As a user i would like to be able to sign out
 
 **bold**Programming Language-Technologies Used for the Project**bold**
 
@@ -54,4 +53,4 @@ The game will be updated with new futures. See below.
 -The user shall be able to choose to start either 'X' or 'O'
 -The user shall be able to play against computer
 -The user shall be able to see the previuos played game history.
--The user shall be able to choose different marks instead choosing 'X' or '0'
+-The user shall be able to choose different marks instead choosng 'X' or '0'
