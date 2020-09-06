@@ -2,13 +2,12 @@ const api = require('./api')
 const ui = require('./ui')
 
 // initializing currentPlayer status, gamecell and game status.
-
 let currentPlayer = 'X'
 let game = ['', '', '', '', '', '', '', '', '']
 let over = false
 
-// Defining game winning variations in array to loop through in array in oder to
-// find winner and draw
+// Defining game winning variations in array to loop through in array in order to
+// find winner and draw cases
 const gameWinningVariations = [
   [0, 1, 2],
   [3, 4, 5],
@@ -31,6 +30,7 @@ const winGame = function () {
 
     // wiritng a condition for checking new array if all index in newArr equls and empty.
     if (newArr[0] === newArr[1] && newArr[1] === newArr[2] && newArr[0] !== '') {
+      $('#game-message-status-game').show()
       $('#game-message-status-game').text(`${currentPlayer} won the game`)
       over = true
     }
@@ -40,17 +40,16 @@ const winGame = function () {
 const drawGame = function () {
   const clickOnGame = game.some(box => box === '')
   if (clickOnGame !== true && over === false) {
+    $('#game-message-status-game').show()
     $('#game-message-status-game').text('Game is draw')
     over = true
   }
 }
-// updating the api when box is clicked with the current player
-// and executing winGame and draw game function when box is clicked.
-
+// updating the game using api when box is clicked with the current player
+// and checking winGame and draw game function when box is clicked.
 const onBoxClick = function (event) {
   event.preventDefault()
   const clickedBox = $(event.target)
-
   if ((over === false) && (clickedBox.text() !== 'X' && clickedBox.text() !== 'O')) {
     const boxNum = clickedBox.attr('data-cell-index')
 
@@ -77,7 +76,7 @@ const onBoxClick = function (event) {
   }
 }
 
-// clering game table and uptdating ip witht the current player
+// clearing game table and updating ip with the current player
 const onStartGame = function (event) {
   game = ['', '', '', '', '', '', '', '', '']
   over = false

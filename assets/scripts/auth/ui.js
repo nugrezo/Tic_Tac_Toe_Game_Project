@@ -2,9 +2,11 @@
 const store = require('./../store')
 
 const signUpSuccess = function (res) {
+  $('#auth-message-sign-up').show()
   $('#auth-message-sign-up').text('Thanks for Siging up ' + res.user.email + ' You can Sign In Now')
   $('#sign-up-form').trigger('reset')
   $('#sign-out-form').hide()
+  $('#auth-message-sign-out').hide()
 }
 
 const signUpFailure = function () {
@@ -14,11 +16,16 @@ const signUpFailure = function () {
 
 const signInSuccess = function (res) {
   store.user = res.user
-  $('#auth-message-sign-in').text('Thanks for Signing in ' + res.user.email + ' Please Change Password Now')
+  $('#auth-message-sign-in').show()
+  $('#auth-message-sign-in').text('Thanks for Signing in ' + res.user.email)
   $('#sign-in-form').trigger('reset')
+  $('#sign-in-form').hide()
+  $('#sign-up-form').hide()
   $('#start-game').show()
-  $('#auth-message-sign-up').hide()
-  $('#sign-out-form').hide()
+  $('#auth-message-sign-up').show()
+  $('#auth-message-sign-up').text('')
+  $('#sign-out-form').show()
+  $('#auth-message-sign-out').hide()
 }
 
 const signInFailure = function () {
@@ -36,6 +43,8 @@ const changePasswordFailure = function (res) {
   $('#change-password-form').trigger('reset')
 }
 const signOutSuccess = function (res) {
+  $('#auth-message-sign-in').hide()
+  $('#auth-message-sign-out').show()
   $('#auth-message-sign-out').text('You`ve Successfully signed out')
   $('#sign-out-form').hide()
   $('#change-password-form').hide()
@@ -51,6 +60,7 @@ const signOutSuccess = function (res) {
 }
 
 const signOutFailure = function (res) {
+  $('#auth-message-sign-out').show()
   $('#auth-message-sign-out').text('Try again.')
   $('#sign-out-form').trigger('reset')
 }

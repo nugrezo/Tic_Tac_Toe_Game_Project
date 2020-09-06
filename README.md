@@ -53,5 +53,5 @@ The game will be updated with new futures. See below.
 
 -The user shall be able to choose to start either 'X' or 'O'
 -The user shall be able to play against computer
--The user shall be able to see the previuos played game hostory.
--The user shall be able to choose different marks instead chooisng 'X' or '0'
+-The user shall be able to see the previuos played game history.
+-The user shall be able to choose different marks instead choosing 'X' or '0'
