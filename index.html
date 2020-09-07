@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Tic Tac Toe Game</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+    <body>
+      <h1> PLAY <strong>TIC TAC TOE</strong> GAME</h1>
+
+  <!--AUTH PART HTML-->
+<section>
+      <form id="sign-up-form" class="forms">
+        <input type="text" name="credentials[email]" placeholder="Email">
+        <input type="password" name="credentials[password]" placeholder="Password">
+        <input type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
+        <input type="submit" class="form-button" value="Sign up!">
+      </form>
+        <p id="auth-message-sign-up"></p>
+
+      <form id="sign-in-form" class="forms">
+        <input type="text" name="credentials[email]" placeholder="Email">
+        <input type="password" name="credentials[password]" placeholder="Password">
+        <input type="submit" class="form-button" value="Sign in!">
+      </form>
+      <p id="auth-message-sign-in"></p>
+      <form id="change-password-form" class="forms">
+           <input type="password" name="passwords[old]" placeholder="Old Password">
+           <input type="password" name="passwords[new]" placeholder="New Password">
+           <input type="submit" class="form-button" value="Change Password!">
+     </form>
+     <p id="auth-message-password-change"></p>
+</section>
+
+<section>
+
+  <form id="start-game">
+    <input type="button" value="Start a New Game">
+  </form>
+
+</section>
+
+<section>
+  <form id="get-all-games">
+    <input type="button" value="Get All Games">
+  </form>
+</section>
+<p id=game-message-get-all-games></p>
+
+<p id='game-message-status-game'></p>
+
+<section>
+ <form id="sign-out-form" class="forms">
+     <input type="submit" value="Sign Out!">
+</form>
+  <p id="auth-message-sign-out"></p>
+</section>
+
+<section>
+  <div class="container">
+    <div class="row board h-100">
+      <div data-cell-index="0" class="col-4 box"></div>
+      <div data-cell-index="1" class="col-4 box"></div>
+      <div data-cell-index="2" class="col-4 box"></div>
+      <div data-cell-index="3" class="col-4 box"></div>
+      <div data-cell-index="4" class="col-4 box"></div>
+      <div data-cell-index="5" class="col-4 box"></div>
+      <div data-cell-index="6" class="col-4 box"></div>
+      <div data-cell-index="7" class="col-4 box"></div>
+      <div data-cell-index="8" class="col-4 box"></div>
+    </div>
+  </div>
+</section>
+    </body>
+</html>
