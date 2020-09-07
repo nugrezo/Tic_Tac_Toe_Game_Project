@@ -1,19 +1,20 @@
-**Game Application: Tic-Tac-Toe**
--The application allows user to play tic tac toe game.The game is being played three-in-a-row boards with nine squares.
--The first player is designated "X" has nine possible positions corresponding to the nine squares in the grid
--The second player is designated "O" has must respond "X"`s opening mark.
--Win strategy: If the player has two in a row, they can place a third to get three in a row.
--Bloc strategy: If the player has two in a row, the player must play the third themselves to block the other player
--Draw strategy: This is the case none of the player is able to make three in a row.
+**Game Application**
+- The application allows user to play tic tac toe game.The game is being played three-in-a-row boards with nine squares.
+- The first player is designated "X" has nine possible positions corresponding to the nine squares in the grid
+- The second player is designated "O" has must respond "X"`s opening mark.
+- Win strategy: If the player has two in a row, they can place a third to get three in a row.
+- Bloc strategy: If the player has two in a row, the player must play the third themselves to block the other player
+- Draw strategy: This is the case none of the player is able to make three in a row.
 
--This is the first project asigned by General Assebmly.
--The project is assigned after the third week of class completion and required to be complated in one week.
--This is a front-end development project.
--The game will be played agaist user and user. The game will not be played against user and computer.
+- This is the first project asigned by General Assebmly.
+- The project is assigned after the third week of class completion and required to be complated in one week.
+- This is a front-end development project.
+- The game will be played agaist user and user. The game will not be played against user and computer.
 
 **Important Links**
--Deployed Repo: https://github.com/nugrezo/Tic_Tac_Toe_Game_Project
--Deployed Client : https://nugrezo.github.io/Tic_Tac_Toe_Game_Project/
+
+- Deployed Repo: https://github.com/nugrezo/Tic_Tac_Toe_Game_Project
+- Deployed Client : https://nugrezo.github.io/Tic_Tac_Toe_Game_Project/
 
 **Planning Story**
 
