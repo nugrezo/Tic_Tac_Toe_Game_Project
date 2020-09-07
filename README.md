@@ -25,13 +25,13 @@ in the end Git hub is used for deployment and commit of the project.
 
 **User Stories**
 
-As a user i would like to be able to sign-in/sign-up and change-password.
-As a user i would like to be able to start and play tic-tac-toe game.
-As a user i would like to be able to only make valid moves.
-As a user i would like a message to be displayed when someone won the game
-As a user i would like to see the number of games played
-As a user i would like to be able to restart new game when the game is over
-As a user i would like to be able to sign out
+- As a user i would like to be able to sign-in/sign-up and change-password.
+- As a user i would like to be able to start and play tic-tac-toe game.
+- As a user i would like to be able to only make valid moves.
+- As a user i would like a message to be displayed when someone won the game
+- As a user i would like to see the number of games played
+- As a user i would like to be able to restart new game when the game is over
+- As a user i would like to be able to sign out
 
 **Programming Language-Technologies Used for the Project**
 
@@ -49,9 +49,9 @@ https://imgur.com/udafnmv
 
 **Unsolved Problems**
 
-The game will be updated with new futures. See below.
+  The game will be updated with new futures. See below.
 
--The user shall be able to choose to start either 'X' or 'O'
--The user shall be able to play against computer
--The user shall be able to see the previuos played game history.
--The user shall be able to choose different marks instead choosng 'X' or '0'
+- The user shall be able to choose to start either 'X' or 'O'
+- The user shall be able to play against computer
+- The user shall be able to see the previuos played game history.
+- The user shall be able to choose different marks instead choosng 'X' or '0'
