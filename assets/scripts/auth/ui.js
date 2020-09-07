@@ -39,7 +39,7 @@ const changePasswordSuccess = function (res) {
 }
 
 const changePasswordFailure = function (res) {
-  $('##auth-message-password-change').text('Try again.')
+  $('#auth-message-password-change').text('Try again.')
   $('#change-password-form').trigger('reset')
 }
 const signOutSuccess = function (res) {
@@ -57,6 +57,7 @@ const signOutSuccess = function (res) {
   $('#message-sign-out').show()
   $('#sign-up-form').show()
   $('#sign-in-form').show()
+  $('#auth-message-password-change').text('')
 }
 
 const signOutFailure = function (res) {
