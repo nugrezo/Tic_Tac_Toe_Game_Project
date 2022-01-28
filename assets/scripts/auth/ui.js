@@ -5,7 +5,7 @@ const signUpSuccess = function (res) {
   $('#auth-message-sign-up').show()
   $('#sign-in-now').text('Please sign in now with the email and password you typed in')
   setTimeout(() => {
-      $('#emailHelp').text('')
+      $('#sign-in-now').text('')
   }, 5000)
   $('#sign-up-form').trigger('reset')
    $('#sign-up-form').hide()
