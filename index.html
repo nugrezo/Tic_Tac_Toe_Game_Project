@@ -30,7 +30,7 @@
           <ul class='navbar-nav ml-auto'>
             <li class='nav-item'><a href='#' class='nav-link' data-toggle='modal' data-target='#change-password'>Change Password</a>
             </li>
-            <li class='nav-item'><a href='#' class='nav-link' id='sout'>Sign Out</a> </li>
+            <li class='nav-item'><a href='#' class='nav-link' id='sign-out'>Sign Out</a> </li>
           </ul>
         </div>
       </nav><br>
@@ -50,7 +50,9 @@
           name="credentials[password]">
       </div>
       <button type="submit" class="btn btn-primary">Sign In</button>
+      
         <p id="auth-message-sign-in"></p>
+        <br>
         <button id="dont-have-account-yet" type="button" class="btn btn-info">Don`t have an account yet?</button>
     
       </form>
@@ -80,28 +82,29 @@
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Change Passord</h5>
+          <h5 class="modal-title" id="change-password-message">Change Password</h5>
           
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
-        <div class="modal-body">  
-          <div class="form-group">
-            <label for="passwordChange"></label>
-            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Old Password"
+        <form id="change-password-form">
+        <div class="modal-body">
+
+            <label for="oldpassword"></label>
+            <input type="password" class="form-control" id="oldpassword" placeholder="Old Password"
               name="passwords[old]">
-          </div>
-          <div class="form-group">
-            <label for="passwordChange"></label>
-            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="New Password"
+            <label for="newpasswordChange"></label>
+            <input type="password" class="form-control" id="newpassword" placeholder="New Password"
               name="passwords[new]">
-          </div>
         </div>
+
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
+          <input type="submit" class="btn btn-primary" value="Save changes">
         </div>
+      </form>
       </div>
     </div>
   </div>
+

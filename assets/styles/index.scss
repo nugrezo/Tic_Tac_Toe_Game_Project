@@ -1,6 +1,7 @@
 @import "~bootstrap/scss/bootstrap";
 
 #sign-up-form {
+  background-color: rgb(227, 242, 232);
   border: 1px solid black;
   border-radius: 10%;
   display: flex;
@@ -13,6 +14,7 @@
 }
 
 #sign-in-form {
+  background-color: rgb(240, 249, 243);
   border: 1px solid black;
   border-radius: 10%;
   display: flex;
@@ -24,16 +26,15 @@
   width: 400px;
 }
 
+.form-group {
+  font-family: sans-serif;
+}
+
 #auth-message-sign-in {
   margin: 0 auto;
-  padding: 10px;
 }
 
 #auth-message-sign-up {
   margin: 0 auto;
   padding: 10px;
-}
-
-#game-nav-bar {
-  color: darkgreen;
 }

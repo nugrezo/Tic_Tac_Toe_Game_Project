@@ -22,13 +22,14 @@ const onSignInForm = function (event) {
 }
 
 const onChangePasswordForm = function (event) {
-  event.preventDefault()
-  const form = event.target
-  const data = getFormFields(form)
-  api.changePassword(data)
-    .then(ui.changePasswordSuccess)
-    .catch(ui.changePasswordFailure)
-}
+    event.preventDefault()
+    console.log("password change button is working")
+    const data = event.target
+    const formData = getFormFields(data)
+    api.changePassword(formData)
+      .then(ui.changePasswordSuccess)
+      .catch(ui.changePasswordFailure)
+  }
 
 const onSignOut = function (event) {
   event.preventDefault()
