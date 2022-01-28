@@ -25,6 +25,7 @@ const signUpFailure = function () {
 
 const signInSuccess = function (res) {
   store.user = res.user
+  $('#game-nav-bar').show()
   $('#auth-message-sign-in').show()
   $('#auth-message-sign-in').text('Thanks for Signing in ' + res.user.email)
   $('#sign-in-form').trigger('reset')
@@ -55,6 +56,7 @@ const changePasswordFailure = function (res) {
   $('#change-password-form').trigger('reset')
 }
 const signOutSuccess = function (res) {
+  $('#game-nav-bar').hide()
   $('#sign-up-form').hide()
   $('#auth-message-sign-in').hide()
   $('#auth-message-sign-out').text('You`ve Successfully signed out')

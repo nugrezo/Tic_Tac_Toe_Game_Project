@@ -18,6 +18,25 @@
 
   <!--AUTH PART HTML-->
 
+    <header>
+      <div id="game-nav-bar">
+      <nav class='navbar navbar-expand-lg navbar-dark bg-dark'>
+        <a href="#" class='navbar-brand'>Tic-Tac-Toe</a>
+        <button class='navbar-toggler' data-toggle='collapse' data-target='#navMenu'>
+          <span class='navbar-toggler-icon'></span>
+        </button>
+        <div class='collapse navbar-collapse' id='navMenu'>
+          <!-- Items of nav bar most of which is linked to modal boxes -->
+          <ul class='navbar-nav ml-auto'>
+            <li class='nav-item'><a href='#' class='nav-link' data-toggle='modal' data-target='#change-password'>Change Password</a>
+            </li>
+            <li class='nav-item'><a href='#' class='nav-link' id='sout'>Sign Out</a> </li>
+          </ul>
+        </div>
+      </nav><br>
+      </div>
+    </header>
+
     <form id="sign-in-form">
       <small id="sign-in-now"></small>
       <div class="form-group">
@@ -32,16 +51,9 @@
       </div>
       <button type="submit" class="btn btn-primary">Sign In</button>
         <p id="auth-message-sign-in"></p>
-      <br>
         <button id="dont-have-account-yet" type="button" class="btn btn-info">Don`t have an account yet?</button>
     
       </form>
-
-     
-
-
-
-
 
       <form id="sign-up-form">
         <div class="form-group">
@@ -63,58 +75,33 @@
             <p id="auth-message-sign-up"></p>
       </form>
       
-   
-
-
-
-
-  
-      <form id="change-password-form" class="forms">
-           <input type="password" name="passwords[old]" placeholder="Old Password">
-           <input type="password" name="passwords[new]" placeholder="New Password">
-           <input type="submit" class="form-button" value="Change Password!">
-     </form>
-     <p id="auth-message-password-change"></p>
-
-
-<section>
-
-  <form id="start-game">
-    <input type="button" value="Start a New Game">
-  </form>
-
-</section>
-
-<section>
-  <form id="get-all-games">
-    <input type="button" value="Get All Games">
-  </form>
-</section>
-<p id=game-message-get-all-games></p>
-
-<p id='game-message-status-game'></p>
-
-<section>
- <form id="sign-out-form" class="forms">
-     <input type="submit" value="Sign Out!">
-</form>
-  <p id="auth-message-sign-out"></p>
-</section>
-
-<section>
-  <div class="container">
-    <div class="row board h-100">
-      <div data-cell-index="0" class="col-4 box"></div>
-      <div data-cell-index="1" class="col-4 box"></div>
-      <div data-cell-index="2" class="col-4 box"></div>
-      <div data-cell-index="3" class="col-4 box"></div>
-      <div data-cell-index="4" class="col-4 box"></div>
-      <div data-cell-index="5" class="col-4 box"></div>
-      <div data-cell-index="6" class="col-4 box"></div>
-      <div data-cell-index="7" class="col-4 box"></div>
-      <div data-cell-index="8" class="col-4 box"></div>
+  <div class="modal fade" id="change-password" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Change Passord</h5>
+          
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">  
+          <div class="form-group">
+            <label for="passwordChange"></label>
+            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Old Password"
+              name="passwords[old]">
+          </div>
+          <div class="form-group">
+            <label for="passwordChange"></label>
+            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="New Password"
+              name="passwords[new]">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
     </div>
   </div>
-</section>
-    </body>
-</html>

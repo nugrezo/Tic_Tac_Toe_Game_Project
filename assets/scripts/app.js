@@ -10,6 +10,7 @@ const authEvents = require('./auth/events')
 const gameEvents = require('./game/events')
 // document ready folder filled for each submit and click actions.
 $(() => {
+  $('#game-nav-bar').hide()
   $('#change-password-form').hide()
   $('#start-game').hide()
   $('#get-all-games').hide()
