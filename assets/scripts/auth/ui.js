@@ -8,7 +8,7 @@ const signUpSuccess = function (res) {
       $('#sign-in-now').text('')
   }, 5000)
   $('#sign-up-form').trigger('reset')
-   $('#sign-up-form').hide()
+  $('#sign-up-form').hide()
   $('#sign-out-form').hide()
   $('#auth-message-sign-out').hide()
   $('#sign-in-form').show()
@@ -17,6 +17,9 @@ const signUpSuccess = function (res) {
 
 const signUpFailure = function () {
   $('#auth-message-sign-up').text('Try again.')
+  setTimeout(() => {
+    $('#auth-message-sign-up').text('')
+  }, 5000)
   $('#sign-up-form').trigger('reset')
 }
 
@@ -52,8 +55,8 @@ const changePasswordFailure = function (res) {
   $('#change-password-form').trigger('reset')
 }
 const signOutSuccess = function (res) {
+  $('#sign-up-form').hide()
   $('#auth-message-sign-in').hide()
-  $('#auth-message-sign-out').show()
   $('#auth-message-sign-out').text('You`ve Successfully signed out')
   $('#sign-out-form').hide()
   $('#change-password-form').hide()
@@ -64,7 +67,6 @@ const signOutSuccess = function (res) {
   $('.container').hide()
   $('#game-message-status-game').hide()
   $('#message-sign-out').show()
-  $('#sign-up-form').show()
   $('#sign-in-form').show()
   $('#auth-message-password-change').text('')
 }
