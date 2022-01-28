@@ -19,6 +19,12 @@ $(() => {
     $('#sign-up-form').show()
     $('#sign-in-form').hide()
   })
+  $('#have-account').on("click", function (event) {
+    event.preventDefault()
+    console.log("button is working")
+    $('#sign-in-form').show()
+    $('#sign-up-form').hide()
+  })
   $('#sign-up-form').on('submit', authEvents.onSignUpForm)
   $('#sign-in-form').on('submit', authEvents.onSignInForm)
   $('#change-password-form').on('submit', authEvents.onChangePasswordForm)
