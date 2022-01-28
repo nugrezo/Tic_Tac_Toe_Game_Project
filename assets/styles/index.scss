@@ -1,53 +1,30 @@
-@import '~bootstrap/scss/bootstrap';
+@import "~bootstrap/scss/bootstrap";
 
-body {
-  background-color: #add8e6;
-}
-
-.form {
-  justify-content: center;
-  display: inline-block;
-}
-
-.forms {
-
-  padding: 3px;
-}
-
-h1 {
-  text-align: center;
-  margin-bottom: 30px;
-  margin-top: 30px;
-  background-color: darkBlue;
-  color: white;
-}
-
-.container {
-  height: 100vh;
-}
-.board {
-  max-height: calc(100vh - 100px);
-  min-width: calc(100vh - 100px);
-  margin: auto;
-}
-.box {
-  min-height: calc(100% / 3);
+#sign-up-form {
+  border: 1px solid black;
+  border-radius: 10%;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 15vh;
-  text-shadow: 2px 2px rgba(0, 0, 0, .25);
-  user-select: none;
-  border-right: 3px solid black;
-  border-bottom: 3px solid black;
-  &:nth-child(3n) {
-    border-right: 0px;
-  }
-  &:nth-last-child(-1n + 3) {
-    border-bottom: 0px;
-  }
-  &:hover {
-    background-color: lightsteelblue;
-    cursor: pointer;
-  }
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+  padding: 1em;
+  width: 400px;
+}
+
+#sign-in-form {
+  border: 1px solid black;
+  border-radius: 10%;
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+  padding: 1em;
+  width: 400px;
+}
+
+#auth-message-sign-in {
+  margin: 0 auto;
+  padding: 10px;
 }

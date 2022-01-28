@@ -12,31 +12,69 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <h1> PLAY <strong>TIC TAC TOE</strong> GAME</h1>
+     <header>
+
+     </header>
 
   <!--AUTH PART HTML-->
-<section>
-      <form id="sign-up-form" class="forms">
-        <input type="text" name="credentials[email]" placeholder="Email">
-        <input type="password" name="credentials[password]" placeholder="Password">
-        <input type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
-        <input type="submit" class="form-button" value="Sign up!">
+
+    <form id="sign-in-form">
+      <small id="sign-in-now"></small>
+      <div class="form-group">
+        <label for="exampleInputEmail1">Email address</label>
+        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+          placeholder="Enter email" name="credentials[email]">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Password</label>
+        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password"
+          name="credentials[password]">
+      </div>
+      <button type="submit" class="btn btn-primary">Sign In</button>
+        <p id="auth-message-sign-in"></p>
+      <br>
+        <button id="dont-have-account-yet" type="button" class="btn btn-info">Don`t have an account yet?</button>
+    
       </form>
+
+     
+
+
+
+
+
+      <form id="sign-up-form">
+        <div class="form-group">
+          <label for="exampleInputEmail1">Email address</label>
+          <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+            placeholder="Enter email" name="credentials[email]">
+          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Password</label>
+          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="credentials[password]">
+        </div>
+        <div class="form-group">
+          <label for="passwordConfirmatuonInputPassword1">Confirm Password</label>
+          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Confirm Password"
+            name="credentials[password_confirmation]">
+        </div>
+        <button type="submit" class="btn btn-success">Sign Up</button>
+      </form>
+      
         <p id="auth-message-sign-up"></p>
 
-      <form id="sign-in-form" class="forms">
-        <input type="text" name="credentials[email]" placeholder="Email">
-        <input type="password" name="credentials[password]" placeholder="Password">
-        <input type="submit" class="form-button" value="Sign in!">
-      </form>
-      <p id="auth-message-sign-in"></p>
+
+
+
+  
       <form id="change-password-form" class="forms">
            <input type="password" name="passwords[old]" placeholder="Old Password">
            <input type="password" name="passwords[new]" placeholder="New Password">
            <input type="submit" class="form-button" value="Change Password!">
      </form>
      <p id="auth-message-password-change"></p>
-</section>
+
 
 <section>
 

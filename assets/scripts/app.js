@@ -14,7 +14,13 @@ $(() => {
   $('#start-game').hide()
   $('#get-all-games').hide()
   $('#sign-out-form').hide()
+  $('#sign-up-form').hide()
   $('.container').hide()
+  $('#dont-have-account-yet').on("click", function (event) {
+    event.preventDefault()
+    $('#sign-up-form').show()
+    $('#sign-in-form').hide()
+  })
   $('#sign-up-form').on('submit', authEvents.onSignUpForm)
   $('#sign-in-form').on('submit', authEvents.onSignInForm)
   $('#change-password-form').on('submit', authEvents.onChangePasswordForm)

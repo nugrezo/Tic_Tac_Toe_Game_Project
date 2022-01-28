@@ -3,10 +3,16 @@ const store = require('./../store')
 
 const signUpSuccess = function (res) {
   $('#auth-message-sign-up').show()
-  $('#auth-message-sign-up').text('Thanks for Siging up ' + res.user.email + ' You can Sign In Now')
+  $('#sign-in-now').text('Please sign in now with the email and password you typed in')
+  setTimeout(() => {
+      $('#emailHelp').text('')
+  }, 5000)
   $('#sign-up-form').trigger('reset')
+   $('#sign-up-form').hide()
   $('#sign-out-form').hide()
   $('#auth-message-sign-out').hide()
+  $('#sign-in-form').show()
+  $('#dont-have-account-yet').hide()
 }
 
 const signUpFailure = function () {
@@ -30,6 +36,9 @@ const signInSuccess = function (res) {
 
 const signInFailure = function () {
   $('#auth-message-sign-in').text('Try again.')
+setTimeout(() => {
+      $('#auth-message-sign-in').text('')
+  }, 5000)
   $('#sign-in-form').trigger('reset')
 }
 
