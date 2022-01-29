@@ -28,6 +28,4 @@ $(() => {
   $('#sign-in-form').on('submit', authEvents.onSignInForm)
   $('#change-password-form').on('submit', authEvents.onChangePasswordForm)
   $('#sign-out').on('click', authEvents.onSignOut)
-  $('.cell').on("click", onCellClick )
-
 })
