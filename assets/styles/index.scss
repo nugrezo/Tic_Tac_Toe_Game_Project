@@ -41,11 +41,10 @@
   padding: 10px;
 }
 
-//game board
 td {
   border: 2px solid black;
-  height: 125px;
-  width: 125px;
+  height: 150px;
+  width: 150px;
   text-align: center;
   vertical-align: middle;
   font-family: "Comic Sans Ms", cursive, sans-serif;
@@ -53,12 +52,8 @@ td {
   cursor: pointer;
 }
 
-table {
-  border-collapse: collapse;
-  position: absolute;
-  left: 50%;
-  margin-left: -155px;
-  top: 150px;
+.cell:hover {
+  background-color: rgb(241, 213, 217);
 }
 
 //remove edge borders around the board
