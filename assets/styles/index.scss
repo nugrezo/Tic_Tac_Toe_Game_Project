@@ -52,6 +52,13 @@ td {
   cursor: pointer;
 }
 
+table {
+  position: absolute;
+  left: 45%;
+  margin-left: -155px;
+  top: 50px;
+}
+
 .cell:hover {
   background-color: rgb(241, 213, 217);
 }
