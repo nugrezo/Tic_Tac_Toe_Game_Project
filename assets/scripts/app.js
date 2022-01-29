@@ -6,8 +6,8 @@
 // use require without a reference to ensure a file is bundled
 // require('./example')
 
-
-
+const authEvents = require("./auth/events")
+// const gameEvents = require("./game/events")
 
 // document ready folder filled for each submit and click actions.
 $(() => {
@@ -28,5 +28,6 @@ $(() => {
   $('#sign-in-form').on('submit', authEvents.onSignInForm)
   $('#change-password-form').on('submit', authEvents.onChangePasswordForm)
   $('#sign-out').on('click', authEvents.onSignOut)
+  $('.cell').on("click", onCellClick )
 
 })
