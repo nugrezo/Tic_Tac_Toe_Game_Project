@@ -1,5 +1,9 @@
 @import "~bootstrap/scss/bootstrap";
 
+body {
+  background-color: rgb(237, 231, 221);
+}
+
 #sign-up-form {
   background-color: rgb(227, 242, 232);
   color: rgb(15, 76, 34);
@@ -41,45 +45,52 @@
   padding: 10px;
 }
 
-td {
-  border: 2px solid black;
-  height: 150px;
-  width: 150px;
+.container {
+  height: 160px;
+  width: 450px;
+  margin-top: 90px;
+}
+
+.box {
+  background: url("./../lib/boardbackground.png") repeat-x 0 0 scroll;
+  border: 3px solid rgb(111, 14, 14);
+  color: rgb(196, 222, 211);
+  text-shadow: 3px 3px 5px rgb(2, 10, 37);
+  -moz-text-shadow: 0 0 2px #000;
+  -webkit-text-shadow: 0 0 2px #000;
+  padding: 10px;
+  height: 160px;
+  width: 450px;
   text-align: center;
   vertical-align: middle;
-  font-family: "Comic Sans Ms", cursive, sans-serif;
-  font-size: 70px;
+  font-family: "Comic Sans MS";
+  font-size: 90px;
   cursor: pointer;
+  &:nth-child(3n) {
+    border-right: 0px;
+  }
+  &:nth-child(1n) {
+    border-left: 0px;
+  }
+  &:nth-child(1n) {
+    border-top: 0px;
+  }
+
+  &:nth-last-child(-1n + 3) {
+    border-bottom: 0px;
+  }
+}
+.box:hover {
+  background-color: rgb(252, 240, 252);
 }
 
-table {
-  position: absolute;
-  left: 45%;
+#game-status-message {
+  color: rgb(13, 55, 18);
+  font-family: "Comic Sans MS";
+  font-size: 25px;
+  left: 55%;
   margin-left: -155px;
-  top: 180px;
-}
-
-.cell:hover {
-  background-color: rgb(241, 213, 217);
-}
-
-//remove edge borders around the board
-table tr:first-child td {
-  border-top: 0;
-}
-table tr:last-child td {
-  border-bottom: 0;
-}
-table tr td:first-child {
-  border-left: 0;
-}
-table tr td:last-child {
-  border-right: 0;
-}
-
-#whose-turn-message {
   position: absolute;
-  left: 56%;
-  margin-left: -155px;
   top: 100px;
+  text-shadow: 0 0 3px rgb(100, 64, 156);
 }

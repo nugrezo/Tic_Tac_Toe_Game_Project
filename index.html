@@ -10,6 +10,7 @@
       <!-- Do not add `script` tags-->
       <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+      
     </head>
     <body>
      <header>
@@ -28,7 +29,7 @@
         <div class='collapse navbar-collapse' id='navMenu'>
           <!-- Items of nav bar most of which is linked to modal boxes -->
           <ul class='navbar-nav ml-auto'>
-            <button id="start-game" class="btn btn-secondary" type="button">Start Game</button>
+            <button id="start-game" class="btn btn-secondary" type="button">New Game</button>
             <li class='nav-item'><a href='#' class='nav-link' data-toggle='modal' data-target='#game-stat'>Game Stat</a>
             </li>
             <li class='nav-item'><a href='#' class='nav-link' data-toggle='modal' data-target='#change-password'>Change Password</a>
@@ -115,48 +116,43 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="game-stat">Game Statistics</h5>
+        <h5 class="modal-title" id="game-stat-message">Game Statistics</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        <p id="number-of-games-played">Number of Games Played</p>
-        <p id="win-number-of-player-X">Number of X` s wins</p>
-        <p id="win-number-of-player-O">Number of O` s wins</p>
+        <p id="number-of-games-played">Number of the Games Played    :</p>
+        <p id="win-number-of-player-X">Number of X` s Wins           :</p>
+        <p id="win-number-of-player-O">Number of O` s Wins           :</p>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button id="get-all-games" type="button" class="btn btn-primary">Show Statistics</button>
+        <button type="button" id="reset-stat" class="btn btn-secondary" data-dismiss="modal">Close</button>
       </div>
     </div>
   </div>
 </div>
 
 
-
-
-  
   </div>
-    <h4 id="whose-turn-message">Whose Turn</h4>
-    <div id="game-board">
-      <table>
-        <tr>
-          <td class="cell" data-cell-index="0" id="0"></td>
-          <td class="cell" data-cell-index="1" id="1"></td>
-          <td class="cell" data-cell-index="2" id="2"></td>
-        </tr>
-        <tr>
-          <td class="cell" data-cell-index="4" id="3"></td>
-          <td class="cell" data-cell-index="5" id="4"></td>
-          <td class="cell" data-cell-index="6" id="5"></td>
-        </tr>
-        <tr>
-          <td class="cell" data-cell-index="7" id="6"></td>
-          <td class="cell" data-cell-index="8" id="7"></td>
-          <td class="cell" data-cell-index="9" id="8"></td>
-        </tr>
-      </table>
+  <h3 id="game-status-message"></h3>
+  <div class="container">
+    <div class="row">
+      <div data-cell-index='0' class="col-sm-4 box"></div>
+      <div data-cell-index='1' class="col-sm-4 box"></div>
+      <div data-cell-index='2' class="col-sm-4 box"></div>
+      <div data-cell-index='3' class="col-sm-4 box"></div>
+      <div data-cell-index='4' class="col-sm-4 box"></div>
+      <div data-cell-index='5' class="col-sm-4 box"></div>
+      <div data-cell-index='6' class="col-sm-4 box"></div>
+      <div data-cell-index='7' class="col-sm-4 box"></div>
+      <div data-cell-index='8' class="col-sm-4 box"></div>
+      </div>
+    </div>
+ 
       
       <p id="invalid-message"></p>
+      <p id="message1"></p>
 
     <div>
