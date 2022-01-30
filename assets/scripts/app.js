@@ -22,6 +22,7 @@ $(() => {
     $('#sign-up-form').show()
     $('#sign-in-form').hide()
   })
+  $('#game-board').hide()
   $('#have-account').on("click", function (event) {
     event.preventDefault()
     console.log("button is working")
@@ -32,16 +33,6 @@ $(() => {
   $('#sign-in-form').on('submit', authEvents.onSignInForm)
   $('#change-password-form').on('submit', authEvents.onChangePasswordForm)
   $('#sign-out').on('click', authEvents.onSignOut)
-  $('#start-game').on('click', function (event) {
-    event.preventDefault()
-    api.startGame()
-      .then(function (res) {
-        store.game = res.game
-        console.log("game started successfully")
-      })
-      .catch(function (err) {
-        console.log("game could not start!")
-      })
+  $('#start-game').on('click',gameEvents.startGameEvent)
   })
 
-})
