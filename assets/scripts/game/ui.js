@@ -5,6 +5,7 @@ const store = require('../store.js')
 const startGameUiSuccess = function (res) {
   store.game = res.game
   $('#game-board').show()
+  $('#whose-turn-message').show()
 }
     
 const startGameUiFailure = function (err) {

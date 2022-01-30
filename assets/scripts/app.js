@@ -23,6 +23,7 @@ $(() => {
     $('#sign-in-form').hide()
   })
   $('#game-board').hide()
+  $('#whose-turn-message').hide()
   $('#have-account').on("click", function (event) {
     event.preventDefault()
     console.log("button is working")

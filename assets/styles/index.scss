@@ -48,16 +48,16 @@ td {
   text-align: center;
   vertical-align: middle;
   font-family: "Comic Sans Ms", cursive, sans-serif;
-  font-size: 80px;
+  font-size: 70px;
   cursor: pointer;
 }
 
-// table {
-//   position: absolute;
-//   left: 45%;
-//   margin-left: -155px;
-//   top: 50px;
-// }
+table {
+  position: absolute;
+  left: 45%;
+  margin-left: -155px;
+  top: 180px;
+}
 
 .cell:hover {
   background-color: rgb(241, 213, 217);
@@ -75,4 +75,11 @@ table tr td:first-child {
 }
 table tr td:last-child {
   border-right: 0;
+}
+
+#whose-turn-message {
+  position: absolute;
+  left: 56%;
+  margin-left: -155px;
+  top: 100px;
 }

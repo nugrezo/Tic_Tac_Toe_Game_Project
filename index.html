@@ -29,6 +29,8 @@
           <!-- Items of nav bar most of which is linked to modal boxes -->
           <ul class='navbar-nav ml-auto'>
             <button id="start-game" class="btn btn-secondary" type="button">Start Game</button>
+            <li class='nav-item'><a href='#' class='nav-link' data-toggle='modal' data-target='#game-stat'>Game Stat</a>
+            </li>
             <li class='nav-item'><a href='#' class='nav-link' data-toggle='modal' data-target='#change-password'>Change Password</a>
             </li>
             <li class='nav-item'><a href='#' class='nav-link' id='sign-out'>Sign Out</a> </li>
@@ -108,7 +110,34 @@
     </div>
   </div>
 
+
+<div class="modal fade" id="game-stat" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="game-stat">Game Statistics</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p id="number-of-games-played">Number of Games Played</p>
+        <p id="win-number-of-player-X">Number of X` s wins</p>
+        <p id="win-number-of-player-O">Number of O` s wins</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
   </div>
+</div>
+
+
+
+
+  
+  </div>
+    <h4 id="whose-turn-message">Whose Turn</h4>
     <div id="game-board">
       <table>
         <tr>
