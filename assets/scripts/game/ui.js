@@ -6,7 +6,8 @@ const startGameUiSuccess = function (res) {
   store.game = res.game
   $('.container').show()
   $('.box').html('')
-  $('#whose-turn-message').show()
+  $('#game-status-message').show()
+  $('#game-status-message').text('')
 }
     
 const startGameUiFailure = function (err) {
@@ -26,10 +27,20 @@ const getAllGamesFailureUi = function (err) {
 
 const drawMessage = function () {
   $('#game-status-message').text('It is a draw')
+ $('#game-status-message').animate({
+      left: '620px',
+      opacity: '1.9',
+
+  })
 }
 
 const winMessage = function (player) {
   $('#game-status-message').text(`The winner is ${player}`)
+  $('#game-status-message').animate({
+      left: '620px',
+      opacity: '1.9',
+
+  })
 }
 
 module.exports = {

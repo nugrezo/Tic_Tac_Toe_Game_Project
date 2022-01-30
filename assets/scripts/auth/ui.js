@@ -56,8 +56,8 @@ const signOutSuccess = function (res) {
   $('#sign-up-form').hide()
   $('#dont-have-account-yet').show()
   $('#sign-in-form').show()
-  $('#game-board').hide()
-  $('#whose-turn-message').hide()
+  $('.container').hide()
+  $('#game-status-message').text('')
   
 }
 

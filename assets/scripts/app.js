@@ -36,7 +36,7 @@ $(() => {
   $('#start-game').on('click', gameEvents.startGameEvent)
   $('#get-all-games').on('click', gameEvents.getAllGamesEvent)
   $('.box').on('click', gameEvents.onBoxClick)
-  $(".container").animate({top:100, left:200}, 3000);
+  $('.container').hide()
 
   })
   
