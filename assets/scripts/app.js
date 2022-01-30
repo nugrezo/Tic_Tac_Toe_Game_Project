@@ -7,9 +7,13 @@
 // require('./example')
 
 const authEvents = require("./auth/events")
+const gameEvents = require("./game/events")
+const api = require("./game/api")
+const store = require("./store")
 // const gameEvents = require("./game/events")
 
 // document ready folder filled for each submit and click actions.
+
 $(() => {
   $('#game-nav-bar').hide()
   $('#sign-up-form').hide()
@@ -28,4 +32,16 @@ $(() => {
   $('#sign-in-form').on('submit', authEvents.onSignInForm)
   $('#change-password-form').on('submit', authEvents.onChangePasswordForm)
   $('#sign-out').on('click', authEvents.onSignOut)
+  $('#start-game').on('click', function (event) {
+    event.preventDefault()
+    api.startGame()
+      .then(function (res) {
+        store.game = res.game
+        console.log("game started successfully")
+      })
+      .catch(function (err) {
+        console.log("game could not start!")
+      })
+  })
+
 })
