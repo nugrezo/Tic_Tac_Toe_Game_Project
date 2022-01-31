@@ -26,10 +26,8 @@ $(() => {
     $('#change-password-message').text('Change Password')
     $('#change-password-message').removeAttr( 'style' )
   })
-  $('#whose-turn-message').hide()
   $('#have-account').on("click", function (event) {
     event.preventDefault()
-    console.log("button is working")
     $('#sign-in-form').show()
     $('#sign-up-form').hide()
   })

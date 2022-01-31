@@ -9,7 +9,6 @@ const signUpSuccess = function (res) {
   }, 5000)
   $('#sign-up-form').trigger('reset')
   $('#sign-up-form').hide()
-  $('#auth-message-sign-out').hide()
   $('#sign-in-form').show()
   $('#dont-have-account-yet').hide()
 }
@@ -62,9 +61,7 @@ const signOutSuccess = function (res) {
 }
 
 const signOutFailure = function (res) {
-  $('#auth-message-sign-out').show()
-  $('#auth-message-sign-out').text('Try again.')
-  $('#sign-out-form').trigger('reset')
+  $('#sign-out').text('sign-out-fail')
 }
 module.exports = {
   signUpSuccess: signUpSuccess,

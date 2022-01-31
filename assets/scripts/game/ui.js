@@ -19,7 +19,6 @@ const getAllGamesSuccessUi = function (res) {
   console.log("res.games is ", res.games)
   let numberOfGames = res.games.length
   $('#number-of-games-played').text("Number of the Games Played :     " + numberOfGames)
-  $('#win-number-of-player-X').text('Number of X` s Wins :            '  )
 }
 
 
