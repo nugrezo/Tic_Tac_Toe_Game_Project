@@ -57,7 +57,7 @@ const signOutSuccess = function (res) {
   $('#dont-have-account-yet').show()
   $('#sign-in-form').show()
   $('.container').hide()
-  $('#game-status-message').text('')
+  $('#game-status-message').hide()
   
 }
 

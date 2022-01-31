@@ -10,7 +10,7 @@ const startGameEvent = function (event) {
     .then(ui.startGameUiSuccess)
     .catch(ui.startGameUiFailure)
   }
-  
+
 const getAllGamesEvent = function (event) {
   event.preventDefault()
   api.getAllGames()

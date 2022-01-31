@@ -7,7 +7,7 @@ const startGameUiSuccess = function (res) {
   $('.container').show()
   $('.box').html('')
   $('#game-status-message').show()
-  $('#game-status-message').text('')
+  $('#game-status-message').html('')
 }
     
 const startGameUiFailure = function (err) {
@@ -16,8 +16,10 @@ const startGameUiFailure = function (err) {
 
 const getAllGamesSuccessUi = function (res) {
   store.games = res.games
+  console.log("res.games is ", res.games)
   let numberOfGames = res.games.length
   $('#number-of-games-played').text("Number of the Games Played :     " + numberOfGames)
+  $('#win-number-of-player-X').text('Number of X` s Wins :            '  )
 }
 
 
@@ -26,19 +28,19 @@ const getAllGamesFailureUi = function (err) {
 }
 
 const drawMessage = function () {
-  $('#game-status-message').text('It is a draw')
+ $('#game-status-message').text('Game is DRAW')
  $('#game-status-message').animate({
       left: '620px',
-      opacity: '1.9',
+      opacity: '1',
 
   })
 }
 
 const winMessage = function (player) {
-  $('#game-status-message').text(`The winner is ${player}`)
+  $('#game-status-message').text(`The WINNER is ${player}`)
   $('#game-status-message').animate({
       left: '620px',
-      opacity: '1.9',
+      opacity: '1',
 
   })
 }
