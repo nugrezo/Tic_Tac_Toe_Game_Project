@@ -21,7 +21,11 @@ $(() => {
     $('#sign-up-form').show()
     $('#sign-in-form').hide()
   })
-  // $('.container').hide()
+  $('#close-password-change').on('click', function (event) {
+    event.preventDefault()
+    $('#change-password-message').text('Change Password')
+    $('#change-password-message').removeAttr( 'style' )
+  })
   $('#whose-turn-message').hide()
   $('#have-account').on("click", function (event) {
     event.preventDefault()
