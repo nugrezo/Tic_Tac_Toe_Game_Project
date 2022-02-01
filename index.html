@@ -1,0 +1,155 @@
+
+<!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <title>Tic Tac Toe Game</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+
+    </head>
+    <body>
+
+  <!--AUTH PART HTML-->
+
+      <header>
+        <div id="game-nav-bar">
+        <nav class='navbar navbar-expand-lg navbar-dark bg-dark'>
+          <a href="#" class='navbar-brand'>Tic-Tac-Toe</a>
+          <button class='navbar-toggler' data-toggle='collapse' data-target='#navMenu'>
+            <span class='navbar-toggler-icon'></span>
+          </button>
+          <div class='collapse navbar-collapse' id='navMenu'>
+            <!-- Items of nav bar most of which is linked to modal boxes -->
+            <ul class='navbar-nav ml-auto'>
+              <button id="start-game" class="btn btn-secondary" type="button">New Game</button>
+              <li class='nav-item'><a href='#' class='nav-link' data-toggle='modal' data-target='#game-stat'>Game Stat</a>
+              </li>
+              <li class='nav-item'><a href='#' class='nav-link' data-toggle='modal' data-target='#change-password'>Change Password</a>
+              </li>
+              <li class='nav-item'><a href='#' class='nav-link' id='sign-out'>Sign Out</a> </li>
+            </ul>
+          </div>
+        </nav><br>
+        </div>
+      </header>
+
+      <section>
+        <form id="sign-in-form">
+          <small id="sign-in-now"></small>
+          <div class="form-group">
+            <label for="email">Email address</label>
+            <input type="text" class="form-control" placeholder="Enter email" name="credentials[email]">
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" class="form-control" placeholder="Password" name="credentials[password]">
+          </div>
+          <button type="submit" class="btn btn-primary">Sign In</button>
+        
+          <p id="auth-message-sign-in"></p>
+          <br>
+          <button id="dont-have-account-yet" type="button" class="btn btn-info">Don`t have an account yet?</button>
+        
+        </form>
+      </section>
+
+      <section>
+        <form id="sign-up-form">
+          <div class="form-group">
+            <label for="email">Email address</label>
+            <input type="text" class="form-control" placeholder="Enter email" name="credentials[email]">
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" class="form-control" placeholder="Password" name="credentials[password]">
+          </div>
+          <div class="form-group">
+            <label for="password-confirmation">Confirm Password</label>
+            <input type="password" class="form-control" placeholder="Confirm Password"
+              name="credentials[password_confirmation]">
+          </div>
+          <button type="submit" class="btn btn-success">Sign Up</button>
+          <br>
+          <button id="have-account" type="button" class="btn btn-info">I have an account</button>
+          <p id="auth-message-sign-up"></p>
+        </form>
+      </section>
+ 
+      
+      <div class="modal fade" id="change-password" tabindex="-1" role="dialog"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="change-password-message">Change Password</h5>
+              
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <form id="change-password-form">
+            <div class="modal-body">
+
+                <label for="oldpassword"></label>
+                <input type="password" class="form-control" id="oldpassword" placeholder="Old Password"
+                  name="passwords[old]">
+                <label for="newpasswordChange"></label>
+                <input type="password" class="form-control" id="newpassword" placeholder="New Password"
+                  name="passwords[new]">
+            </div>
+
+            <div class="modal-footer">
+              <button type="button" id="close-password-change" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <input type="submit" class="btn btn-primary" value="Save changes">
+            </div>
+          </form>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="modal fade" id="game-stat" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="game-stat-message">Game Statistics</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <p id="number-of-games-played">Number of the Games Played    :</p>
+            </div>
+            <div class="modal-footer">
+              <button id="get-all-games" type="button" class="btn btn-primary">Show Statistics</button>
+              <button type="button" id="reset-stat" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h3 id="game-status-message"></h3>
+      <div class="container">
+    <div class="row">
+      <div data-cell-index='0' class="col-sm-4 box"></div>
+      <div data-cell-index='1' class="col-sm-4 box"></div>
+      <div data-cell-index='2' class="col-sm-4 box"></div>
+      <div data-cell-index='3' class="col-sm-4 box"></div>
+      <div data-cell-index='4' class="col-sm-4 box"></div>
+      <div data-cell-index='5' class="col-sm-4 box"></div>
+      <div data-cell-index='6' class="col-sm-4 box"></div>
+      <div data-cell-index='7' class="col-sm-4 box"></div>
+      <div data-cell-index='8' class="col-sm-4 box"></div>
+      </div>
+      </div>
+      <p id="invalid-message"></p>
+    </body>
+
+  </html>
