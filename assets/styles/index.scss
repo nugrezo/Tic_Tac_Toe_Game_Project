@@ -1,4 +1,7 @@
-@import "~bootstrap/scss/bootstrap";
+// Custom.scss
+// Option A: Include all of Bootstrap
+
+@import "node_modules/bootstrap/scss/bootstrap";
 
 body {
   background-color: rgb(237, 231, 221);
