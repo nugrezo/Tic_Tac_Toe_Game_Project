@@ -52,6 +52,7 @@ body {
 }
 
 .box {
+  background: url("./../lib/boardbackground.png") repeat-x 0 0 scroll;
   border: 3px solid rgb(111, 14, 14);
   color: rgb(196, 222, 211);
   text-shadow: 3px 3px 5px rgb(2, 10, 37);
